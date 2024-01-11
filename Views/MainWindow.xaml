@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApp_Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Practice"
+        xmlns:vm="clr-namespace:WpfApp_Practice.ViewModels"
+        xmlns:inf="clr-namespace:WpfApp_Practice.Infrastructure"
+        mc:Ignorable="d"
+         
+       Title="MainWindow" Height="450" Width="800" x:Name="mnWnd">
+    
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <inf:BirthDayToStrConverter x:Key="ageConverter"/>
+    </Window.Resources>
+    <DockPanel>
+        <TextBox x:Name="tbFilter" DockPanel.Dock="Top"  Margin="0 10">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TextChanged">
+                    <i:InvokeCommandAction Command="{Binding FilterCommand}"
+                 CommandParameter="{Binding ElementName=tbFilter}"></i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBox>
+        <Grid>
+            <Grid.RowDefinitions>  
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+            <ListView Grid.Row="0"  ItemsSource="{Binding Workers}" SelectedItem="{Binding SelectedWorker}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding FirstName}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader  x:Name="Name" Command="{Binding SortCommand}" CommandParameter="{Binding ElementName=Name}" Content="Ім'я"/>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding LastName}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader x:Name="SName" Command="{Binding SortCommand}" CommandParameter="{Binding ElementName=SName}" Content="Прізвище"/>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding Position}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader x:Name="Position" Command="{Binding SortCommand}" CommandParameter="{Binding ElementName=Position}" Content="Посада"/>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="170" DisplayMemberBinding="{Binding BirthDate, Converter={StaticResource ageConverter}}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader x:Name="BirthDate"  Command="{Binding SortCommand}" CommandParameter="{Binding ElementName=BirthDate}" Content="Вік"/>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Edit"  Command="{Binding OpenEditCommand  }"/>
+                <Button Grid.Column="1" Content="Delete"  Command="{Binding DeleteCommand}"/>
+                <Button Grid.Column="2" Content="Add"  Command="{Binding  OpenWindowCommand}"/>
+                <Button Grid.Column="3" Content="Close"   Command="{Binding CloseCommand}" 
+                                   CommandParameter="{Binding ElementName=mnWnd}"/>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

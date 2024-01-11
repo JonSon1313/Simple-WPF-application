@@ -1,0 +1,22 @@
+C:\Users\38067\source\repos\WpfApp_Practice\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\38067\source\repos\WpfApp_Practice\Model\bin\Debug\net6.0\Model.dll
+C:\Users\38067\source\repos\WpfApp_Practice\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.dll
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\38067\source\repos\WpfApp_Practice\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\bin\Debug\net6.0\Model.dll
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.dll
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\38067\OneDrive\Робочий стіл\Examm\WpfApp_Practice\Model\obj\Debug\net6.0\ref\Model.dll

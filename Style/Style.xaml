@@ -1,0 +1,109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+
+    <Style TargetType="Label">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    
+    <Style TargetType="ListView">
+        <Setter Property="Margin" Value="8"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Template">
+             <Setter.Value>
+                <ControlTemplate TargetType="ListView">
+                    <Border CornerRadius="8"
+             BorderThickness="2"
+             BorderBrush="White"
+           
+             Background="{TemplateBinding Background}">
+                        <DockPanel>
+                            <GridViewHeaderRowPresenter DockPanel.Dock="Top" Columns="{Binding View.Columns, 
+                         RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" />
+                            <ItemsPresenter/>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="DatePicker">
+    <Setter Property="Margin" Value="15 2"/>
+    <Setter Property="FontSize" Value="20"/>
+    <Setter Property="FontWeight" Value="SemiBold"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="DatePicker">
+                <Border CornerRadius="15"
+                        BorderThickness="2"
+                        BorderBrush="LightPink"
+                        Background="White">
+                    <DatePickerTextBox x:Name="PART_TextBox"
+                                       Margin="2"
+                                       VerticalContentAlignment="Center"
+                                       Background="Transparent"
+                                       BorderThickness="0"/>
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+       </Setter>
+    </Style>
+    
+    <Style TargetType="TextBox">
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="15"
+                        BorderThickness="2"
+                        BorderBrush="LightPink"
+                        Background="White">
+                        <ScrollViewer Margin="5" x:Name="PART_ContentHost" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="Margin" Value="18"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="ExtraBlack"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="8"
+                        BorderThickness="3"
+                        BorderBrush="GhostWhite"
+                        Background="LightCoral">
+                        <ContentPresenter VerticalAlignment="Center"
+                                      HorizontalAlignment="Center">
+                        </ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8"
+                        BorderThickness="3"
+                        
+                        Background="White">
+                                <ContentPresenter VerticalAlignment="Center"
+                                      HorizontalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
